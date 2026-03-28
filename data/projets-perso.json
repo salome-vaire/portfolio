@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Projet personnel",
+    "titre": "Portfolio personnel",
+    "description": "Création d'un portfolio pour présenter mon parcours, ma formation, mes compétences et mes réalisations.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript"
+    ],
+    "periode": "2025 - 2026"
+  },
+  {
+    "type": "Projet personnel",
+    "titre": "Reconnaissance assistée de dessins d’animaux",
+    "description": "Création d’un mini site web permettant de dessiner un animal puis d’obtenir plusieurs propositions de reconnaissance à partir d’une analyse simple du tracé et de caractéristiques visuelles.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "details": "Projet personnel réalisé pour travailler le canvas HTML, la logique conditionnelle en JavaScript et la mise en place d’un système simple de scoring.",
+    "lien": "site-dessin-animal/index.html"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Projet école",
+    "titre": "Site vitrine en HTML / CSS / Bootstrap",
+    "description": "Projet de création d'un site web responsive avec une structure simple et une présentation claire des contenus.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript"
+    ],
+    "periode": "2024 - 2025",
+    "lien": "#"
+  },
+  {
+    "type": "Projet école",
+    "titre": "Application web simple",
+    "description": "Développement d’une application web dans le cadre du BTS SIO permettant de manipuler des données utilisateurs.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "PHP"
+    ],
+    "details": "Projet réalisé en groupe dans un contexte pédagogique."
+  }
+]

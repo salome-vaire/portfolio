@@ -1,0 +1,24 @@
+[
+  {
+    "type": "Projet entreprise",
+    "titre": "Développement d'interfaces utilisateurs au Moulin",
+    "description": "Participation au développement et à l'amélioration d'interfaces utilisateurs pour des applications internes, avec travail sur des composants front-end.",
+    "technologies": [
+      "TSX",
+      "Redux",
+      "Front-end"
+    ],
+    "periode": "06/2025 - 07/2025"
+  },
+  {
+    "type": "Projet entreprise",
+    "titre": "Analyse et amélioration d’un site web chez ESSN",
+    "description": "Réalisation de retours structurés sur un site existant, identification de bugs, tests fonctionnels, propositions d’améliorations ergonomiques et techniques, ainsi que participation à l’optimisation de l’expérience utilisateur.",
+    "technologies": [
+      "Tests fonctionnels",
+      "Débogage",
+      "Analyse UX"
+    ],
+    "periode": "2025 - 2026"
+  }
+]

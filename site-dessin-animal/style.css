@@ -1,0 +1,82 @@
+body {
+  background: #f4f6fb;
+  color: #1f2a44;
+  font-family: Arial, sans-serif;
+}
+
+.app-card,
+.result-box,
+.canvas-wrapper,
+.helper-box {
+  border-radius: 16px;
+}
+
+.canvas-wrapper {
+  background: #ffffff;
+  border: 1px solid #d9dfec;
+  padding: 12px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  border: 2px dashed #c7d0e4;
+  border-radius: 12px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.result-box,
+.helper-box {
+  background: #f8faff;
+  border: 1px solid #d9dfec;
+  padding: 20px;
+}
+
+.helper-box {
+  background: #ffffff;
+}
+
+.result-text {
+  min-height: 72px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
+}
+
+.result-rank {
+  background: #eef3ff;
+  border: 1px solid #d7e2ff;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.result-rank + .result-rank {
+  margin-top: 10px;
+}
+
+.result-score {
+  font-size: 0.85rem;
+  color: #4b5f95;
+}
+
+code {
+  color: #3556a8;
+}
+
+@media (max-width: 768px) {
+  canvas {
+    height: 300px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
