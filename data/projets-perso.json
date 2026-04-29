@@ -1,15 +1,15 @@
 [
   {
     "type": "Projet personnel",
-    "titre": "Portfolio personnel",
-    "description": "Création d'un portfolio pour présenter mon parcours, ma formation, mes compétences et mes réalisations.",
+    "titre": "CVs",
+    "description": "Création d'un site web contenant une page d'accueil et deux pages de CV réalisés en duo dans le cadre d'un mini stage à 42.",
     "technologies": [
       "HTML",
       "CSS",
       "Bootstrap"
     ],
     "periode": "02/2025",
-    "lienProjet": "/projets/cv42/index.html"
+    "lienProjet": "projets/cv42/index.html"
   },
   {
     "type": "Projet personnel",
@@ -22,6 +22,6 @@
       "Bootstrap"
     ],
     "details": "Projet personnel réalisé pour travailler le canvas HTML, la logique conditionnelle en JavaScript et la mise en place d’un système simple de scoring.",
-    "lienProjet": "/projets/site-dessin-animal/index.html"
+    "lienProjet": "projets/site-dessin-animal/index.html"
   }
 ]

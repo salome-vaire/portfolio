@@ -9,18 +9,22 @@
       "Bootstrap",
       "JavaScript"
     ],
-    "periode": "2024 - 2025",
+    "periode": "2026",
     "lien": "#"
   },
   {
     "type": "Projet école",
-    "titre": "Application web simple",
-    "description": "Développement d’une application web dans le cadre du BTS SIO permettant de manipuler des données utilisateurs.",
+    "titre": "Quiz",
+    "description": "Application de quiz en PHP réalisée en groupe, avec authentification, questions, scores, administration et pages de collaborateurs.",
     "technologies": [
+      "PHP",
+      "MySQL",
       "HTML",
       "CSS",
-      "PHP"
+      "Bootstrap"
     ],
-    "details": "Projet réalisé en groupe dans un contexte pédagogique."
+    "periode": "2025 S2",
+    "details": "Projet importé dans le portfolio. La démonstration complète demande un serveur PHP local et une base MySQL initialisée.",
+    "lienProjet": "projets/quiz214/index.php"
   }
 ]

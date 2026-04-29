@@ -48,8 +48,9 @@ function createProjectCard(project) {
     ? `<p>${escapeHtml(project.details)}</p>`
     : "";
 
-  const boutonHtml = project.lienProjet
-    ? `<a href="${escapeHtml(project.lienProjet)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary mt-2">
+  const projectLink = project.lienProjet || project.lien;
+  const boutonHtml = projectLink
+    ? `<a href="${escapeHtml(projectLink)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary mt-2">
         Voir le projet
       </a>`
     : "";

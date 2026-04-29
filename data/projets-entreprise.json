@@ -18,10 +18,10 @@
   {
     "type": "Projet entreprise",
     "titre": "Analyse et amélioration d’un site web chez ESSN",
-    "description": "Réalisation de retours structurés sur un site existant, identification de bugs, tests fonctionnels, propositions d’améliorations ergonomiques et techniques, ainsi que participation à l’optimisation de l’expérience utilisateur.",
+    "description": "Réalisation d’un audit de sécurité du système d’information avec identification des vulnérabilités et rédaction d’un rapport structuré. Participation au bêta-test d’un outil SaaS avec retours sur l’ergonomie et les fonctionnalités. Mise en place d’une veille stratégique multi-thématique.",
     "entreprise": {
       "nom": "ESSN",
-      "lien": "https://lemoulin.fr/"
+      "lien": "https://essn.fr/"
     },
     "technologies": [
       "Tests fonctionnels",

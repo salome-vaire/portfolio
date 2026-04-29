@@ -1,0 +1,154 @@
+TUTORIEL DE DEMONSTRATION LOCALE DU PORTFOLIO
+=============================================
+
+Contexte
+--------
+Le portfolio peut etre heberge sur une page statique, mais certains projets importes
+utilisent PHP et une base de donnees. Ils ne fonctionneront donc pas directement sur
+un hebergement 100% statique.
+
+Pour une demonstration, il faut lancer le portfolio avec le serveur PHP local, puis
+ouvrir le port avec ngrok si la demo doit etre accessible depuis un autre appareil.
+
+
+1. Prerequis
+------------
+- PHP installe sur la machine.
+  Verification :
+  php -v
+
+- Pour BirdMail :
+  PHP doit avoir SQLite active.
+  Verification :
+  php -m
+  Chercher pdo_sqlite et sqlite3 dans la liste.
+
+- Pour Quiz 214 :
+  MySQL ou MariaDB doit etre installe et lance.
+  PHP doit avoir pdo_mysql active.
+
+- ngrok :
+  Un executable ngrok.exe est deja present dans :
+  projets\birdmail\ngrok.exe
+
+
+2. Lancer le portfolio en local
+-------------------------------
+Depuis le dossier racine du portfolio :
+
+php -S localhost:8000
+
+Ouvrir ensuite dans le navigateur :
+
+http://localhost:8000
+
+Les projets importes sont accessibles depuis la section "Mes projets".
+
+
+3. Demonstration de BirdMail
+----------------------------
+BirdMail utilise PHP + SQLite. Aucune creation manuelle de base n'est necessaire :
+le fichier SQLite est deja present et le projet peut aussi initialiser ses tables.
+
+Depuis la racine du portfolio :
+
+php -S localhost:8000
+
+Ouvrir :
+
+http://localhost:8000/projets/birdmail/index.php
+
+Comptes de demonstration :
+
+Utilisateur :
+email : demo@birdmail.local
+mot de passe : demo1234
+
+Administrateur :
+email : admin@birdmail.local
+mot de passe : admin1234
+
+Lors de la connexion, un code A2F de demonstration s'affiche sur la page pour
+faciliter la presentation.
+
+
+4. Demonstration de Quiz 214
+----------------------------
+Quiz 214 utilise PHP + MySQL. Il faut donc importer la base avant de lancer la demo.
+
+Creer la base de donnees quiz, puis importer les fichiers SQL situes ici :
+
+projets\quiz214\database\quiz.sql
+projets\quiz214\database\importUsers.sql
+
+Methode avec phpMyAdmin :
+
+1. Creer une base nommee quiz.
+2. Importer quiz.sql dans cette base.
+3. Importer importUsers.sql si le fichier contient les utilisateurs de demo.
+
+Methode en ligne de commande, a adapter selon votre installation MySQL :
+
+mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS quiz CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysql -u root -p quiz < projets\quiz214\database\quiz.sql
+mysql -u root -p quiz < projets\quiz214\database\importUsers.sql
+
+Le fichier de configuration du projet est :
+
+projets\quiz214\database\database.cfg
+
+Par defaut, il attend :
+
+base : quiz
+utilisateur : quizApp
+mot de passe : myQuiz
+hote : localhost
+
+Si vous utilisez root ou un autre utilisateur MySQL pour la demo, modifier ces
+valeurs dans database.cfg.
+
+Lancer ensuite le serveur local depuis la racine du portfolio :
+
+php -S localhost:8000
+
+Ouvrir :
+
+http://localhost:8000/projets/quiz214/index.php
+
+
+5. Ouvrir la demo avec ngrok
+----------------------------
+Laisser le serveur PHP tourner sur le port 8000.
+
+Ouvrir un deuxieme terminal PowerShell depuis la racine du portfolio, puis lancer :
+
+.\projets\birdmail\ngrok.exe http 8000
+
+ngrok affiche une URL publique de ce type :
+
+https://exemple-aleatoire.ngrok-free.app
+
+Partager cette URL pour montrer le portfolio depuis un autre appareil.
+
+Les liens des projets fonctionneront avec la meme URL, par exemple :
+
+https://exemple-aleatoire.ngrok-free.app/projets/birdmail/index.php
+https://exemple-aleatoire.ngrok-free.app/projets/quiz214/index.php
+
+
+6. En cas de probleme
+---------------------
+- Si les fichiers JSON des projets ne se chargent pas en ouvrant directement
+  index.html, c'est normal : lancer le site avec php -S localhost:8000.
+
+- Si BirdMail affiche une erreur SQLite :
+  verifier que pdo_sqlite est active dans PHP.
+
+- Si Quiz 214 affiche une erreur de connexion base de donnees :
+  verifier que MySQL est lance, que la base quiz existe, et que database.cfg
+  contient le bon utilisateur et le bon mot de passe.
+
+- Si le port 8000 est deja utilise :
+  utiliser un autre port, par exemple :
+  php -S localhost:8080
+  .\projets\birdmail\ngrok.exe http 8080
