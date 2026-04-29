@@ -1,0 +1,223 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #e7f5ff 0%, #fef8ff 100%);
+  color: #2b3e55;
+}
+
+.glass-nav {
+  background: rgba(255,255,255,0.82);
+  border-bottom: 2px solid #1f1a1a;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.68);
+  border: 2px dashed #9fd0fb;
+  border-radius: 34px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(148, 182, 210, 0.18);
+}
+
+.hero-card {
+  padding-bottom: 26px;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  color: #5e8fbd;
+  font-weight: 700;
+}
+
+.form-control,
+.form-select {
+  border-radius: 18px;
+  border: 1px solid #9dc3e6;
+  min-height: 48px;
+  background: rgba(255,255,255,0.8);
+}
+
+textarea.form-control { min-height: 120px; }
+.btn { border-radius: 18px; min-height: 46px; }
+.form-range { padding-left: 4px; padding-right: 4px; }
+
+.bird-stage {
+  position: relative;
+  min-height: 310px;
+}
+
+.bird-stage__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  padding: 10px;
+}
+
+.bird-stage__cage {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.bird-stage__bird {
+  position: absolute;
+  width: 110px;
+  left: 50%;
+  top: 74%;
+  transform: translate(-50%, -50%);
+}
+
+.hop {
+  animation: hop 2.2s ease-in-out infinite;
+}
+
+@keyframes hop {
+  0%, 100% { transform: translate(-50%, -50%); }
+  25% { transform: translate(-50%, -57%); }
+  50% { transform: translate(-50%, -49%); }
+  75% { transform: translate(-50%, -55%); }
+}
+
+.speech-bubble {
+  max-width: 440px;
+  margin: 0 auto 10px auto;
+  background: #fffef8;
+  border: 2px solid #9fd0fb;
+  border-radius: 22px;
+  padding: 14px 16px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(94, 143, 189, 0.12);
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 20px;
+  height: 20px;
+  background: #fffef8;
+  border-right: 2px solid #9fd0fb;
+  border-bottom: 2px solid #9fd0fb;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.mini-help-card {
+  background: rgba(255,255,255,0.55);
+  border-radius: 24px;
+  padding: 16px;
+  height: 100%;
+}
+
+.letter-canvas {
+  width: 100%;
+  max-width: 100%;
+  min-height: 240px;
+  background: #fffaf1;
+  border: 2px dashed #9fd0fb;
+  border-radius: 24px;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.stamp-preview {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stamp-preview img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.55);
+  border-radius: 14px;
+  padding: 6px;
+}
+
+.letter-card {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid rgba(120, 160, 190, 0.35);
+  border-radius: 24px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.letter-card__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.letter-card__title {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.letter-card__meta,
+.letter-card__date {
+  color: #4f657e;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.letter-body { margin-top: 10px; }
+.letter-body p { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.letter-image,
+.letter-video,
+.letter-audio {
+  display: block;
+  max-width: 240px;
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+  object-fit: contain;
+  background: rgba(255,255,255,0.7);
+}
+
+.letter-embed {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 16/9;
+  border: 0;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+
+.stamp-large img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  margin-top: 8px;
+}
+
+.pager {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767.98px) {
+  .bird-stage__cage {
+    width: 180px;
+    height: 180px;
+  }
+  .bird-stage__bird {
+    width: 36px;
+  }
+  .glass-card {
+    padding: 16px;
+    border-radius: 28px;
+  }
+}

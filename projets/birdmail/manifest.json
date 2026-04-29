@@ -1,0 +1,9 @@
+{
+  "name": "BirdMail",
+  "short_name": "BirdMail",
+  "start_url": "index.php",
+  "display": "standalone",
+  "background_color": "#dff8ff",
+  "theme_color": "#8ed6ff",
+  "icons": []
+}

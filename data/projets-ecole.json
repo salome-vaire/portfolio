@@ -1,8 +1,8 @@
 [
   {
     "type": "Projet école",
-    "titre": "Site vitrine en HTML / CSS / Bootstrap",
-    "description": "Projet de création d'un site web responsive avec une structure simple et une présentation claire des contenus.",
+    "titre": "Portfolio - Epreuve E5",
+    "description": "Projet de création d'un site web responsive avec une structure simple et une présentation claire des contenus pour l'épreuve E5 du BTS.",
     "technologies": [
       "HTML",
       "CSS",
