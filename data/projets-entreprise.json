@@ -3,22 +3,32 @@
     "type": "Projet entreprise",
     "titre": "Développement d'interfaces utilisateurs au Moulin",
     "description": "Participation au développement et à l'amélioration d'interfaces utilisateurs pour des applications internes, avec travail sur des composants front-end.",
+    "entreprise": {
+      "nom": "Le Moulin",
+      "lien": "https://lemoulin.fr/"
+    },
     "technologies": [
       "TSX",
       "Redux",
       "Front-end"
     ],
-    "periode": "06/2025 - 07/2025"
+    "periode": "06/2025 - 07/2025",
+    "lienProjet": "https://projetlemoulin.netlify.app/"
   },
   {
     "type": "Projet entreprise",
     "titre": "Analyse et amélioration d’un site web chez ESSN",
     "description": "Réalisation de retours structurés sur un site existant, identification de bugs, tests fonctionnels, propositions d’améliorations ergonomiques et techniques, ainsi que participation à l’optimisation de l’expérience utilisateur.",
+    "entreprise": {
+      "nom": "ESSN",
+      "lien": "https://lemoulin.fr/"
+    },
     "technologies": [
       "Tests fonctionnels",
       "Débogage",
       "Analyse UX"
     ],
-    "periode": "2025 - 2026"
+    "periode": "02/2026 - 03/2026",
+    "lienProjet": "https://essnauthor.fr/chartegraphique"
   }
 ]

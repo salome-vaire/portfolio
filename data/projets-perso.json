@@ -6,10 +6,10 @@
     "technologies": [
       "HTML",
       "CSS",
-      "Bootstrap",
-      "JavaScript"
+      "Bootstrap"
     ],
-    "periode": "2025 - 2026"
+    "periode": "02/2025",
+    "lienProjet": "/projets/cv42/index.html"
   },
   {
     "type": "Projet personnel",
@@ -22,6 +22,6 @@
       "Bootstrap"
     ],
     "details": "Projet personnel réalisé pour travailler le canvas HTML, la logique conditionnelle en JavaScript et la mise en place d’un système simple de scoring.",
-    "lien": "site-dessin-animal/index.html"
+    "lienProjet": "/projets/site-dessin-animal/index.html"
   }
 ]

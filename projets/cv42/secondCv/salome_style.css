@@ -1,0 +1,441 @@
+:root {
+  --pink:        #f472b6;
+  --pink-glow:   rgba(244, 114, 182, 0.15);
+  --bg:          #fdf2f8;
+  --bg2:         #fce7f3;
+  --surface:     #fff;
+  --border:      rgba(244, 114, 182, 0.25);
+  --text:        #4a1535;
+  --muted:       #be7ca8;
+  --dark:        #2d0a1e;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  overflow-x: hidden;
+}
+
+/* ── NAVBAR ── */
+nav {
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: rgba(253, 242, 248, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  gap: 0.25rem;
+  box-shadow: 0 4px 20px rgba(244, 114, 182, 0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  transition: color 0.2s, background 0.2s;
+}
+
+nav a:hover, nav a.active {
+  color: var(--dark);
+  background: var(--pink-glow);
+}
+
+/* ── SECTIONS ── */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+}
+
+/* ── HERO ── */
+#hero {
+  flex-direction: column;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(244,114,182,0.15) 0%, transparent 70%),
+    var(--bg);
+  overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  box-shadow: 0 0 40px rgba(244,114,182,0.2), 0 0 0 8px rgba(244,114,182,0.06);
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease both;
+  background: var(--bg2);
+}
+
+.hero-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+
+.hero-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  color: var(--dark);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.hero-name span { color: var(--pink); }
+
+.hero-sub {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+  animation: fadeUp 0.8s 0.25s ease both;
+}
+
+.hero-badge {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--pink-glow);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8rem;
+  color: var(--pink);
+  letter-spacing: 0.05em;
+  animation: fadeUp 0.8s 0.35s ease both;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pink);
+  animation: pulse 2s infinite;
+}
+
+/* ── SKILLS ── */
+#skills { background: var(--bg2); }
+
+.section-inner {
+  width: 100%;
+  max-width: 900px;
+}
+
+.section-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--dark);
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  border-color: var(--pink);
+  box-shadow: 0 0 30px var(--pink-glow);
+}
+
+.card-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.skill-pill {
+  display: inline-block;
+  background: rgba(244,114,182,0.08);
+  border: 1px solid rgba(244,114,182,0.2);
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.82rem;
+  color: var(--text);
+  margin: 0.3rem 0.3rem 0 0;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.skill-pill:hover {
+  background: rgba(244,114,182,0.18);
+  border-color: var(--pink);
+  color: var(--dark);
+}
+
+/* ── CONTACT ── */
+#contact {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(244,114,182,0.1) 0%, transparent 70%),
+    var(--bg);
+  flex-direction: column;
+  text-align: center;
+}
+
+.contactCard {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contact-card-item {
+  width: 180px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.contact-card-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-card-item .card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.contact-card-item h5 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--pink-glow);
+  border: 1px solid var(--border);
+  color: var(--dark);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.contact-btn:hover {
+  background: rgba(244,114,182,0.25);
+  border-color: var(--pink);
+}
+
+/* ── LIENS ── */
+#liens {
+  background: var(--bg2);
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
+}
+
+.liens-grid {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.liens-block h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.profile-card {
+  width: 240px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 13px -1px #000;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.profile-card:hover {
+  box-shadow: 5px 5px 13px -1px rgb(0,58,87);
+  border-color: rgb(0,58,87);
+  transform: scale(1.02);
+}
+
+.profile-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-card .pc-name {
+  font-size: 22px;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 8px 10px 4px;
+}
+
+.profile-card .pc-sub {
+  font-size: 13px;
+  font-family: Arial;
+  font-style: italic;
+  color: #717171;
+  font-weight: bold;
+  padding: 0 10px 10px;
+}
+
+.profile-card .pc-btn {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  background-color: rgb(160, 222, 253);
+  padding: 10px 0;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-card .pc-btn:hover { background-color: rgb(100, 200, 249); }
+
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.back-home:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+}
+
+/* ── HERO PLACEHOLDER ── */
+.hero-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+/* ── CONTACT INNER ── */
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── CONTACT CARD ── */
+.contact-card-item {
+  width: 180px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.contact-card-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.contact-card-body h5 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}

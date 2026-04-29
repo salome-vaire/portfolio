@@ -75,28 +75,36 @@
           <p>Une présentation de mon profil, de ma formation et de mes expériences.</p>
         </div>
 
-        <div class="row g-4">
-          <div class="col-lg-7">
-            <div class="card border-0 shadow-sm h-100">
+        <!-- À PROPOS -->
+        <div class="row g-4 mb-4">
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
               <div class="card-body p-4">
                 <h3 class="h5 mb-3">À propos de moi</h3>
-                <p></p>
+                <p>
                   Actuellement en deuxième année de BTS SIO option SLAM,
                   je développe progressivement mes compétences en développement web et en programmation.
                 </p>
-
                 <p>
-                  Je m’intéresse particulièrement aux technologies liées au front-end,
-                  ainsi qu’aux nouvelles problématiques liées à l’intelligence artificielle
+                  Je m'intéresse particulièrement aux technologies liées au front-end,
+                  ainsi qu'aux nouvelles problématiques liées à l'intelligence artificielle
                   et à la cybersécurité.
                 </p>
-
-                <p>
-                  Sérieuse et motivée, je cherche à acquérir de l’expérience professionnelle
+                <p class="mb-0">
+                  Sérieuse et motivée, je cherche à acquérir de l'expérience professionnelle
                   à travers mes stages et projets.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <h3 class="h5 mt-4 mb-3">Parcours</h3>
+        <!-- PARCOURS -->
+        <div class="row g-4 mb-4">
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h3 class="h5 mb-3">Parcours</h3>
                 <div class="timeline">
                   <div class="timeline-item">
                     <h4 class="h6 mb-1">BTS SIO - option SLAM - Lycée Le Castel</h4>
@@ -107,22 +115,23 @@
                     <h4 class="h6 mb-1">Stage ESSN - Lyon</h4>
                     <p class="timeline-date">Mars 2026</p>
                     <p class="mb-0">
-                      Analyse et amélioration d’un site web existant.
+                      Analyse et amélioration d'un site web existant.
                       Réalisation de tests fonctionnels, identification de bugs,
-                      propositions d’améliorations ergonomiques et techniques.
-                      Participation à l’optimisation de l’expérience utilisateur.
+                      propositions d'améliorations ergonomiques et techniques.
+                      Participation à l'optimisation de l'expérience utilisateur.
                     </p>
                   </div>
-                  <div class="timeline-item">
-                    <h4 class="h6 mb-1">Stage d'initiation au développement front-end - 42 Lyon</h4>
-                    <p class="timeline-date">Mars 2025</p>
-                    <p class="mb-0">Découverte du développement front-end dans un cadre professionnalisant.</p>
-                  </div>
+
                   <div class="timeline-item">
                     <h4 class="h6 mb-1">Stage BTS SIO - Le Moulin, Lyon</h4>
                     <p class="timeline-date">Juin 2025 - Juillet 2025</p>
                     <p class="mb-0">Développement d'interfaces utilisateurs en TSX avec Redux et participation à l'amélioration des fonctionnalités front-end.</p>
                   </div>
+                  <div class="timeline-item">
+                    <h4 class="h6 mb-1">Stage d'initiation au développement front-end - 42 Lyon</h4>
+                    <p class="timeline-date">Mars 2025</p>
+                    <p class="mb-0">Découverte du développement front-end dans un cadre professionnalisant.</p>
+                  </div>                  
                   <div class="timeline-item">
                     <h4 class="h6 mb-1">1re année de licence Biologie - UCLy</h4>
                     <p class="timeline-date">2023 - 2024</p>
@@ -137,14 +146,15 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-5">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body p-4 d-flex flex-column">
+        <!-- CV -->
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
                 <h3 class="h5 mb-3">CV</h3>
-                <p>
-                  Une version de mon CV est disponible ci-dessous.
-                </p>
+                <p>Une version de mon CV est disponible ci-dessous.</p>
                 <div class="cv-placeholder mt-3 mb-4">
                   <p class="mb-2 fw-semibold">Contenu principal du CV</p>
                   <ul class="mb-0 text-muted small">
@@ -168,14 +178,13 @@
                     <span class="skill-pill">Git</span>
                   </div>
                 </div>
-                <a href="documents/CV_Salome_Vaire.pdf" class="btn btn-outline-primary mt-auto" download>Télécharger mon CV</a>
+                <a href="documents/CV_Salome_Vaire.pdf" class="btn btn-outline-primary" download>Télécharger mon CV</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <section id="bts" class="section-padding">
       <div class="container">
         <div class="section-header">
@@ -223,30 +232,22 @@
             <div class="card border-0 shadow-sm">
               <div class="card-body p-4">
                 <h3 class="h5 mb-3">Ce que j'apprends en SLAM</h3>
-                <div class="row g-3">
-                  <div class="col-md-6 col-lg-3">
-                    <div class="mini-info-card">
-                      <h4 class="h6">Développement</h4>
-                      <p class="mb-0">Créer des sites web, des applications et des interfaces adaptées aux besoins.</p>
-                    </div>
+                <div class="slam-cards-row">
+                  <div class="mini-info-card">
+                    <h4 class="h6">Développement</h4>
+                    <p class="mb-0">Créer des sites web, des applications et des interfaces adaptées aux besoins.</p>
                   </div>
-                  <div class="col-md-6 col-lg-3">
-                    <div class="mini-info-card">
-                      <h4 class="h6">Bases de données</h4>
-                      <p class="mb-0">Concevoir, organiser et exploiter les données d'une application.</p>
-                    </div>
+                  <div class="mini-info-card">
+                    <h4 class="h6">Bases de données</h4>
+                    <p class="mb-0">Concevoir, organiser et exploiter les données d'une application.</p>
                   </div>
-                  <div class="col-md-6 col-lg-3">
-                    <div class="mini-info-card">
-                      <h4 class="h6">Mode projet</h4>
-                      <p class="mb-0">Travailler en équipe, planifier les tâches et suivre l'avancement d'un projet.</p>
-                    </div>
+                  <div class="mini-info-card">
+                    <h4 class="h6">Mode projet</h4>
+                    <p class="mb-0">Travailler en équipe, planifier les tâches et suivre l'avancement d'un projet.</p>
                   </div>
-                  <div class="col-md-6 col-lg-3">
-                    <div class="mini-info-card">
-                      <h4 class="h6">Professionnalisation</h4>
-                      <p class="mb-0">Développer une posture professionnelle et préparer mon insertion dans le monde du travail.</p>
-                    </div>
+                  <div class="mini-info-card">
+                    <h4 class="h6">Professionnalisation</h4>
+                    <p class="mb-0">Développer une posture professionnelle et préparer mon insertion dans le monde du travail.</p>
                   </div>
                 </div>
               </div>
@@ -256,74 +257,114 @@
       </div>
     </section>
 
-    <section id="synthese" class="section-padding bg-light">
+    <section id="synthese" class="section-padding synthese-section">
       <div class="container">
+
         <div class="section-header">
           <h2>Tableau de synthèse</h2>
-          <p>Cette partie reprend les grandes compétences de l'épreuve E4. Les champs pourront être complétés avec les réalisations correspondantes.</p>
+          <p>
+            Cette partie reprend les grandes compétences de l'épreuve E4.
+          </p>
         </div>
 
-        <div class="alert alert-light border mb-4 synthese-note">
-          <strong>Remarque :</strong> le vrai tableau officiel existe déjà. Cette version sur le site sert surtout à présenter de manière lisible les situations professionnelles principales.
-        </div>
+        <a href="documents/tableau_e4_salome.pdf"
+          class="btn btn-outline-primary synthese-btn"
+          download>
+          Télécharger le tableau
+        </a>
 
-        <div class="table-responsive shadow-sm rounded">
-          <table class="table table-bordered table-hover align-middle mb-0 custom-table synthese-table">
+        <div class="table-responsive synthese-wrapper">
+
+          <table class="synthese-table">
+
             <thead>
               <tr>
-                <th>Réalisation professionnelle</th>
+                <th>Réalisation</th>
                 <th>Période</th>
                 <th>Gérer le patrimoine informatique</th>
-                <th>Répondre aux incidents et aux demandes</th>
+                <th>Répondre aux incidents</th>
                 <th>Développer la présence en ligne</th>
                 <th>Travailler en mode projet</th>
-                <th>Mettre à disposition un service informatique</th>
-                <th>Organiser son développement professionnel</th>
+                <th>Mettre à disposition un service</th>
+                <th>Développement pro</th>
               </tr>
             </thead>
+
             <tbody>
-              <tr>
-                <td>Projet ou situation 1 à compléter</td>
-                <td>À compléter</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
+
+              <!-- ================= SCOLAIRE ================= -->
+              <tr class="section-title">
+                <td colspan="8">PROJETS SCOLAIRES</td>
               </tr>
-              <tr>
-                <td>Projet ou situation 2 à compléter</td>
-                <td>À compléter</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
+
+              <tr class="section-school">
+                <td>Audit de parc informatique (GLPI)</td>
+                <td>2e année - T1</td>
+                <td>✓</td><td></td><td></td><td></td><td></td><td>✓</td>
               </tr>
-              <tr>
-                <td>Projet ou situation 3 à compléter</td>
-                <td>À compléter</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
+
+              <tr class="section-school">
+                <td>Développement d'un quiz en PHP</td>
+                <td>1ère année - T2</td>
+                <td></td><td></td><td></td><td></td><td>✓</td><td></td>
               </tr>
-              <tr>
-                <td>Projet ou situation 4 à compléter</td>
-                <td>À compléter</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
-                <td>À préciser</td>
+
+              <tr class="section-school">
+                <td>Veille informationnelle personnelle</td>
+                <td>2024 - 2026</td>
+                <td></td><td></td><td></td><td></td><td></td><td>✓</td>
               </tr>
+
+              <!-- ================= ENTREPRISE 1 ================= -->
+              <tr class="section-title pro1">
+                <td colspan="8">ENTREPRISE - 1ère année</td>
+              </tr>
+
+              <tr class="section-pro1">
+                <td>Menu interactif application mobile</td>
+                <td>04/06 → 13/06/2025</td>
+                <td></td><td></td><td>✓</td><td>✓</td><td>✓</td><td></td>
+              </tr>
+
+              <tr class="section-pro1">
+                <td>Fonction rappel / alarme</td>
+                <td>16/06 → 25/06/2025</td>
+                <td></td><td></td><td></td><td>✓</td><td>✓</td><td></td>
+              </tr>
+
+              <tr class="section-pro1">
+                <td>Page de connexion React/TS</td>
+                <td>26/06 → 05/07/2025</td>
+                <td></td><td></td><td>✓</td><td>✓</td><td>✓</td><td></td>
+              </tr>
+
+              <!-- ================= ENTREPRISE 2 ================= -->
+              <tr class="section-title pro2">
+                <td colspan="8">ENTREPRISE - 2ème année</td>
+              </tr>
+
+              <tr class="section-pro2">
+                <td>Audit de sécurité informatique</td>
+                <td>25/02 → 02/03/2026</td>
+                <td>✓</td><td>✓</td><td></td><td>✓</td><td></td><td>✓</td>
+              </tr>
+
+              <tr class="section-pro2">
+                <td>Charte graphique ESSN</td>
+                <td>24/03 → 25/03/2026</td>
+                <td></td><td></td><td>✓</td><td></td><td>✓</td><td></td>
+              </tr>
+
+              <tr class="section-pro2">
+                <td>Veille stratégique</td>
+                <td>16/03 → 27/03/2026</td>
+                <td></td><td></td><td></td><td>✓</td><td></td><td>✓</td>
+              </tr>
+
             </tbody>
+
           </table>
+
         </div>
       </div>
     </section>
@@ -454,27 +495,27 @@
         <div class="row g-4">
           <div class="col-md-6 col-lg-4">
             <div class="certification-card">
-              <h3 class="h6">L'essentiel de GitHub</h3>
-              <p class="mb-2 text-muted">LinkedIn Learning</p>
-              <a href="documents/github-certif.pdf" target="_blank" class="btn btn-sm btn-outline-primary">
+              <h3>L'essentiel de GitHub</h3>
+              <p class="cert-provider">LinkedIn Learning</p>
+              <a href="documents/github-certif.pdf" target="_blank" class="btn-cert">
                 Voir le certificat
               </a>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="certification-card">
-              <h3 class="h6">Les fondements de la programmation : Bases de données</h3>
-              <p class="mb-2 text-muted">LinkedIn Learning</p>
-              <a href="documents/bdd-certif.pdf" target="_blank" class="btn btn-sm btn-outline-primary">
+              <h3>Développeur de bases de données</h3>
+              <p class="cert-provider">LinkedIn Learning</p>
+              <a href="documents/bdd-certif.pdf" target="_blank" class="btn-cert">
                 Voir le certificat
               </a>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="certification-card">
-              <h3 class="h6">Développeur de bases de données</h3>
-              <p class="mb-2 text-muted">LinkedIn Learning</p>
-              <a href="documents/dev-bdd-certif.pdf" target="_blank" class="btn btn-sm btn-outline-primary">
+              <h3>Les fondements de la programmation : Bases de données</h3>
+              <p class="cert-provider">LinkedIn Learning</p>
+              <a href="documents/dev-bdd-certif.pdf" target="_blank" class="btn-cert">
                 Voir le certificat
               </a>
             </div>
