@@ -24,7 +24,6 @@
       "Bootstrap"
     ],
     "periode": "2025 S2",
-    "details": "Projet importé dans le portfolio. La démonstration complète demande un serveur PHP local et une base MySQL initialisée.",
-    "lienProjet": "projets/quiz214/index.php"
+    "lienProjet": "https://2c53-77-141-20-171.ngrok-free.app/projets/quiz214/index.php"
   }
 ]

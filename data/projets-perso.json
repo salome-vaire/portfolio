@@ -23,5 +23,19 @@
     ],
     "details": "Projet personnel réalisé pour travailler le canvas HTML, la logique conditionnelle en JavaScript et la mise en place d’un système simple de scoring.",
     "lienProjet": "projets/site-dessin-animal/index.html"
+  },
+    {
+    "type": "Projet personnel",
+    "titre": "BirdMail",
+    "description": "Application de messagerie en PHP avec inscription, connexion, double authentification de démonstration, personnalisation visuelle, lettres chiffrées, dessins et médias.",
+    "technologies": [
+      "PHP",
+      "SQLite",
+      "JavaScript",
+      "Bootstrap"
+
+    ],
+    "details": "Ce projet a été réalisé en groupe.",
+    "lienProjet": "https://2c53-77-141-20-171.ngrok-free.app/projets/birdmail/index.php"
   }
 ]
